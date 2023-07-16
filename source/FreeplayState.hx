@@ -34,7 +34,7 @@ class FreeplayState extends MusicBeatState
 
 	var curDifficulty:Int = -1;
 
-	private static var lastDifficultyName:String = 'hell';
+	private static var lastDifficultyName:String = '';
 
 	var scoreBG:FlxSprite;
 	var scoreText:FlxText;
