@@ -193,13 +193,14 @@ class TitleState extends MusicBeatState
 		}
 		add(bg);
 
-		bgTop = new FlxBackdrop(Paths.image('titleBG'));
-		bgTop.updateHitbox();
+		bgTop = new FlxBackdrop(Paths.image('images/titleBG'));
 		bgTop.alpha = 1;
 		bgTop.scrollFactor.set(0, 0);
 		bgTop.screenCenter(X);
 		bgTop.antialiasing = ClientPrefs.globalAntialiasing;
 		bgTop.color = 0xff200033;
+		bgTop.animation.addByPrefix('sity', 'sity', 24, false)
+		bgTop.updateHitbox();
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
