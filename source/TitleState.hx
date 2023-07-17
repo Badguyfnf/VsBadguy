@@ -193,7 +193,7 @@ class TitleState extends MusicBeatState
 		}
 		add(bg);
 
-		bgTop = new FlxBackdrop(Paths.image('bg-bs/cicle'));
+		bgTop = new FlxBackdrop(Paths.image('titleBG'));
 		bgTop.updateHitbox();
 		bgTop.alpha = 1;
 		bgTop.scrollFactor.set(0, 0);
