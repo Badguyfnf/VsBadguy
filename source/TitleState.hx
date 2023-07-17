@@ -200,7 +200,7 @@ class TitleState extends MusicBeatState
 		bgTop.antialiasing = ClientPrefs.globalAntialiasing;
 		bgTop.color = 0xff200033;
 		bgTop.animation.addByPrefix('sity', 'sity', 24, true);
-		bgTop.animation.play('sity')
+		bgTop.animation.play('sity');
 		bgTop.updateHitbox();
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
