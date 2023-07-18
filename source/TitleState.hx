@@ -334,8 +334,9 @@ class TitleState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (bgTop != null)
+		bgTop.animation.play('sity');
 		{
-			bgTop.x = 0;
+			bgTop.x = -300;
 			bgTop.y -= 0.16 / (ClientPrefs.framerate / 60);
 		}
 
