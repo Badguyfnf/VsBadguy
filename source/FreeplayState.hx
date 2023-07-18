@@ -64,6 +64,8 @@ class FreeplayState extends MusicBeatState
 			case 'story':
 				addWeek(['warm up', 'immortal', 'god power'], 1, 0xff8c00ff, ['badguy', 'badguy', 'badguy']);
 				addWeek(['victim', 'maniacal mercenary', 'living armory'], 1, 0xff8c00ff, ['grunt', 'mc', 'mc']);
+				addWeek(['sussus purplus', 'communication error', 'hide'], 1, 0xff8c00ff, ['purpule', 'purpule', 'purpule']);
+				addWeek(['village', 'glitching world '], 1, 0xff8c00ff, ['minecraft', 'minecraft']);
 			case 'non-story':
 				addWeek(['purpled', 'powerful', 'bulletation'], 1, 0xff00c3ff, ['badguy', 'badguy', 'mc']);
 			case 'covers':
