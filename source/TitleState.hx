@@ -195,13 +195,12 @@ class TitleState extends MusicBeatState
 
 		bgTop = new FlxSprite();
 		bgTop.frames = Paths.getSparrowAtlas('images/titleBG');
-		bgTop.screenCenter()
+		bgTop.screenCenter();
 		bgTop.antialiasing = ClientPrefs.globalAntialiasing;
 		bgTop.color = 0xff200033;
 		bgTop.animation.addByPrefix('sity', 'sity', 24, true);
 		bgTop.animation.play('sity');
 		bgTop.updateHitbox();
-
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
 		logoBl.antialiasing = ClientPrefs.globalAntialiasing;
