@@ -195,6 +195,7 @@ class TitleState extends MusicBeatState
 
 		bgTop = new FlxSprite();
 		bgTop.frames = Paths.getSparrowAtlas('images/titleBG');
+		bgTop.screenCenter()
 		bgTop.antialiasing = ClientPrefs.globalAntialiasing;
 		bgTop.color = 0xff200033;
 		bgTop.animation.addByPrefix('sity', 'sity', 24, true);
