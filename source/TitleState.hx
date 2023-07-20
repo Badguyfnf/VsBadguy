@@ -61,7 +61,7 @@ class TitleState extends MusicBeatState
 
 	public static var initialized:Bool = false;
 
-	var bgTop:FlxBackdrop;
+	var bgTop:FlxSprite;
 
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
