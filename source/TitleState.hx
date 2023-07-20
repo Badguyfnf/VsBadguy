@@ -193,10 +193,8 @@ class TitleState extends MusicBeatState
 		}
 		add(bg);
 
-		bgTop = new FlxBackdrop(Paths.image('images/titleBG'));
-		bgTop.alpha = 1;
-		bgTop.scrollFactor.set(0, 0);
-		bgTop.screenCenter(X);
+		bgTop = new FlxSprite();
+		bgTop.frames = Paths.getSparrowAtlas('images/titleBG');
 		bgTop.antialiasing = ClientPrefs.globalAntialiasing;
 		bgTop.color = 0xff200033;
 		bgTop.animation.addByPrefix('sity', 'sity', 24, true);
@@ -334,10 +332,10 @@ class TitleState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (bgTop != null)
-		{
+		/*{
 			bgTop.x = 0;
 			bgTop.y -= 0.16 / (ClientPrefs.framerate / 60);
-		}
+		}*/
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
