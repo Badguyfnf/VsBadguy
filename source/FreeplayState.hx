@@ -69,7 +69,7 @@ class FreeplayState extends MusicBeatState
 			case 'non-story':
 				addWeek(['purpled', 'powerful', 'bulletation', 'calm', 'amogugus'], 1, 0xff00c3ff, ['badguy', 'badguy', 'mc', 'minecraft', 'purpule']);
 			case 'covers':
-				addWeek(['defeat'], 0, 0xFFce3c80, ['purpule']);
+				addWeek(['defeat'], 1, 0xFFce3c80, ['purpule']);
 			case 'secrets':
 				addWeek(['Tutorial'], 0, 0xFFce3c80, ['gf']);
 		};
