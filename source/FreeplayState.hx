@@ -67,9 +67,9 @@ class FreeplayState extends MusicBeatState
 				addWeek(['sussus purplus', 'communication error', 'hide'], 1, 0xff8c00ff, ['purpule', 'purpule', 'purpule']);
 				addWeek(['village', 'glitching world '], 1, 0xff8c00ff, ['minecraft', 'minecraft']);
 			case 'non-story':
-				addWeek(['purpled', 'powerful', 'bulletation'], 1, 0xff00c3ff, ['badguy', 'badguy', 'mc']);
+				addWeek(['purpled', 'powerful', 'bulletation', 'calm', 'amogugus'], 1, 0xff00c3ff, ['badguy', 'badguy', 'mc', 'minecraft', 'purpule']);
 			case 'covers':
-				addWeek(['devils-gambit'], 0, 0xFFce3c80, ['badn']);
+				addWeek(['defeat'], 0, 0xFFce3c80, ['purpule']);
 			case 'secrets':
 				addWeek(['Tutorial'], 0, 0xFFce3c80, ['gf']);
 		};
