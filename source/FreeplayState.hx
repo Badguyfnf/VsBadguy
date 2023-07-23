@@ -69,7 +69,7 @@ class FreeplayState extends MusicBeatState
 			case 'non-story':
 				addWeek(['purpled', 'powerful', 'bulletation', 'calm', 'amogugus'], 1, 0xff00c3ff, ['badguy', 'badguy', 'mc', 'minecraft', 'purpule']);
 			case 'covers':
-				addWeek(['defeat'], 1, 0xFFce3c80, ['purpule']);
+				addWeek(['defeat', 'accelerant', 'foolhardy'], 1, 0xFFce3c80, ['purpule', 'mc', 'badguy']);
 			case 'secrets':
 				addWeek(['Tutorial'], 0, 0xFFce3c80, ['gf']);
 		};
@@ -83,7 +83,7 @@ class FreeplayState extends MusicBeatState
 
 		#if DISCORD
 		// Updating Discord Rich Presence
-		DiscordClient.changePresence("In the Menus", null);
+		DiscordClient.changePresence("FreePlay", null);
 		#end
 
 		for (i in 0...WeekData.weeksList.length)
