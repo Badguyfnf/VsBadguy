@@ -81,10 +81,10 @@ class SUtil
 		#end
 	}
 
-	public static function gameCrashCheck()
+	/*public static function gameCrashCheck()
 	{
 		Lib.current.loaderInfo.uncaughtErrorEvents.addEventListener(UncaughtErrorEvent.UNCAUGHT_ERROR, onCrash);
-	}
+	}*/
 
 	public static function onCrash(e:UncaughtErrorEvent):Void
 	{
