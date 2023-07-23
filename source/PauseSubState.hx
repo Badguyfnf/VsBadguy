@@ -106,14 +106,14 @@ class PauseSubState extends MusicBeatSubstate
 		practiceText.visible = PlayState.instance.practiceMode;
 		add(practiceText);
 
-		var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
+		/*var chartingText:FlxText = new FlxText(20, 15 + 101, 0, "CHARTING MODE", 32);
 		chartingText.scrollFactor.set();
 		chartingText.setFormat(Paths.font('vcr.ttf'), 32);
 		chartingText.x = FlxG.width - (chartingText.width + 20);
 		chartingText.y = FlxG.height - (chartingText.height + 20);
 		chartingText.updateHitbox();
 		chartingText.visible = PlayState.chartingMode;
-		add(chartingText);
+		add(chartingText);*/
 
 		blueballedTxt.alpha = 0;
 		levelDifficulty.alpha = 0;
