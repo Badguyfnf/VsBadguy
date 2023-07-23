@@ -3365,7 +3365,7 @@ class PlayState extends MusicBeatState
 		paused = true;
 		cancelMusicFadeTween();
 		MusicBeatState.switchState(new ChartingState());
-		chartingMode = true;
+		//chartingMode = true;
 
 		#if desktop
 		DiscordClient.changePresence("Chart Editor", null, null, true);
@@ -3966,11 +3966,11 @@ class PlayState extends MusicBeatState
 			}
 			playbackRate = 1;
 
-			if (chartingMode)
+			/*if (chartingMode)
 			{
 				openChartEditor();
 				return;
-			}
+			}*/
 
 			if (isStoryMode)
 			{
@@ -5288,7 +5288,7 @@ class PlayState extends MusicBeatState
 	#if ACHIEVEMENTS_ALLOWED
 	private function checkForAchievement(achievesToCheck:Array<String> = null):String
 	{
-		if(chartingMode) return null;
+		//if(chartingMode) return null;
 
 		var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice', false) || ClientPrefs.getGameplaySetting('botplay', false));
 		for (i in 0...achievesToCheck.length) {
