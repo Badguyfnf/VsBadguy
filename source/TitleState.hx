@@ -61,7 +61,7 @@ class TitleState extends MusicBeatState
 
 	public static var initialized:Bool = false;
 
-	var bgTop:FlxSprite;
+	var bgTop:FlxBackdrop;
 
 	var blackScreen:FlxSprite;
 	var credGroup:FlxGroup;
@@ -163,7 +163,7 @@ class TitleState extends MusicBeatState
 	}
 
 	var logoBl:FlxSprite;
-	//var gfDance:FlxSprite;
+	var gfDance:FlxSprite;
 	var danceLeft:Bool = false;
 	var titleText:FlxSprite;
 	var swagShader:ColorSwap = null;
@@ -193,14 +193,13 @@ class TitleState extends MusicBeatState
 		}
 		add(bg);
 
-		bgTop = new FlxSprite();
-		bgTop.frames = Paths.getSparrowAtlas('images/titleBG');
-		bgTop.screenCenter()
+		bgTop = new FlxBackdrop(Paths.image('bg-bs/cicle'));
+		bgTop.updateHitbox();
+		bgTop.alpha = 1;
+		bgTop.scrollFactor.set(0, 0);
+		bgTop.screenCenter(X);
 		bgTop.antialiasing = ClientPrefs.globalAntialiasing;
 		bgTop.color = 0xff200033;
-		bgTop.animation.addByPrefix('sity', 'sity', 24, true);
-		bgTop.animation.play('sity');
-		bgTop.updateHitbox();
 
 		logoBl = new FlxSprite(titleJSON.titlex, titleJSON.titley);
 		logoBl.frames = Paths.getSparrowAtlas('logoBumpin');
@@ -210,16 +209,16 @@ class TitleState extends MusicBeatState
 		logoBl.updateHitbox();
 
 		swagShader = new ColorSwap();
-		//gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
-		//gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
-		//gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
-		//gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
-		//gfDance.antialiasing = ClientPrefs.globalAntialiasing;
+		gfDance = new FlxSprite(titleJSON.gfx, titleJSON.gfy);
+		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
+		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
+		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		gfDance.antialiasing = ClientPrefs.globalAntialiasing;
 
 		add(bgTop);
 		bgTop.shader = swagShader.shader;
-		//add(gfDance);
-		//gfDance.shader = swagShader.shader;
+		add(gfDance);
+		gfDance.shader = swagShader.shader;
 		add(logoBl);
 		logoBl.shader = swagShader.shader;
 
@@ -333,10 +332,10 @@ class TitleState extends MusicBeatState
 	override function update(elapsed:Float)
 	{
 		if (bgTop != null)
-		/*{
+		{
 			bgTop.x = 0;
 			bgTop.y -= 0.16 / (ClientPrefs.framerate / 60);
-		}*/
+		}
 
 		if (FlxG.sound.music != null)
 			Conductor.songPosition = FlxG.sound.music.time;
