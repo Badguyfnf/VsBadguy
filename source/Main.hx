@@ -159,7 +159,7 @@ class Main extends Sprite
 		Application.current.window.alert(errMsg, "Error!");
     #if desktop
 		DiscordClient.shutdown
-	 #end
+	 #end;
 		Sys.exit(1);
 	}
 	#end
